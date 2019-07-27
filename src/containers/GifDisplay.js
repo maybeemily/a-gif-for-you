@@ -4,7 +4,7 @@ import Gif from '../components/Gif';
 import { getGif } from '../services/GiphyAPI';
 
 
-export default class GifDisplay extends PureComponent {
+class GifDisplay extends PureComponent {
 
   state = {
     searchText: '',
@@ -21,7 +21,6 @@ export default class GifDisplay extends PureComponent {
     this.fetchGif();
   }
 
-
   handleChange = ({ target }) => {
     this.setState({ [target.name] : target.value });
   }
@@ -35,3 +34,5 @@ export default class GifDisplay extends PureComponent {
     );
   }
 }
+
+export default GifDisplay;
