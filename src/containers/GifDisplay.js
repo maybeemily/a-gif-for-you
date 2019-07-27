@@ -17,20 +17,21 @@ export default class GifDisplay extends PureComponent {
   }
 
   fetchGif = () => {
-    getGif();
+    getGif(this.state.searchText)
+      .then((image) => this.setState(image));
   }
 
-  componentDidMount() {
+  searchSubmit = event => {
+    event.preventDefault();
     this.fetchGif();
   }
 
   render() {
     return (
-      <form>
-        <GifSearchForm searchText={this.state.searchText} handleChange={this.handleChange}/>
-        <Gif image={this.fetchData}/>
-        <button onClick={this.fetchGif}>Random Gif!</button>
-      </form>
+      <>
+        <GifSearchForm searchText={this.state.searchText} handleChange={this.handleChange} searchSubmit={this.searchSubmit}/>
+        <Gif image={this.state.image}/>
+      </>
     );
   }
 }

@@ -1,7 +1,7 @@
 
 
-export const getGif = () => {
-  return fetch(`https://api.giphy.com/v1/gifs/random?api_key=${process.env.API_KEY}`)
+export const getGif = (searchTerm) => {
+  return fetch(`https://api.giphy.com/v1/gifs/random?tag=${searchTerm}&api_key=${process.env.API_KEY}`)
     .then(res => ([res.ok, res.json()]))
     .then(([ok, json]) => {
       if(!ok) {
