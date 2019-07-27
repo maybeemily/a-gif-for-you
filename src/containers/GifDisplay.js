@@ -7,7 +7,9 @@ import { getGif } from '../services/GiphyAPI';
 export default class GifDisplay extends PureComponent {
 
   state = {
-    searchText: ''
+    searchText: '',
+    image: '',
+    
   }
 
   handleChange = ({ target }) => {
@@ -18,11 +20,15 @@ export default class GifDisplay extends PureComponent {
     getGif();
   }
 
+  componentDidMount() {
+    this.fetchGif();
+  }
+
   render() {
     return (
       <form>
-        <GifSearchForm />
-        <Gif/>
+        <GifSearchForm searchText={this.state.searchText} handleChange={this.handleChange}/>
+        <Gif image={this.fetchData}/>
         <button onClick={this.fetchGif}>Random Gif!</button>
       </form>
     );
