@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import GifSearchForm from '../components/GifSearchForm';
 import Gif from '../components/Gif';
+import { getGif } from '../services/GiphyAPI';
 
 
 export default class GifDisplay extends PureComponent {
@@ -13,12 +14,16 @@ export default class GifDisplay extends PureComponent {
     this.setState({ [target.name] : target.value });
   }
 
+  fetchGif = () => {
+    getGif();
+  }
+
   render() {
     return (
       <form>
         <GifSearchForm />
         <Gif/>
-        <button>Random Gif!</button>
+        <button onClick={this.fetchGif}>Random Gif!</button>
       </form>
     );
   }

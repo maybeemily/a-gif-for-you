@@ -1,9 +1,7 @@
-import process from 'dotenv';
 
-const APIKEY = process.env.API_KEY;
 
-export const getGifs = () => {
-  return fetch(`https://api.giphy.com/v1/gifs/random?api_key=${APIKEY}`)
+export const getGif = () => {
+  return fetch()
     .then(res => ([res.ok, res.json()]))
     .then(([ok, json]) => {
       if(!ok) {
