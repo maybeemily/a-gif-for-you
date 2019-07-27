@@ -8,16 +8,12 @@ export default class GifDisplay extends PureComponent {
 
   state = {
     searchText: '',
-    image: '',
-  }
-
-  handleChange = ({ target }) => {
-    this.setState({ [target.name] : target.value });
+    imageURL: '',
   }
 
   fetchGif = () => {
     getGif(this.state.searchText)
-      .then((image) => this.setState(image));
+      .then((imageURL) => this.setState(imageURL));
   }
 
   searchSubmit = event => {
@@ -25,11 +21,16 @@ export default class GifDisplay extends PureComponent {
     this.fetchGif();
   }
 
+
+  handleChange = ({ target }) => {
+    this.setState({ [target.name] : target.value });
+  }
+
   render() {
     return (
       <>
         <GifSearchForm searchText={this.state.searchText} handleChange={this.handleChange} searchSubmit={this.searchSubmit}/>
-        <Gif image={this.state.image}/>
+        <Gif imageURL={this.state.imageURL}/>
       </>
     );
   }

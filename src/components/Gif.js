@@ -1,15 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Gif({ image }) {
-  Gif.defaultProps = { image: '' };
+function Gif({ imageURL }) {
   return (
-    <img src={image}/>
+    <img src={imageURL}/>
   );
 }
 
 Gif.propTypes = {
-  image: PropTypes.string.isRequired
+  imageURL: PropTypes.string.isRequired
 };
 
 export default Gif;

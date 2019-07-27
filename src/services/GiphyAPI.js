@@ -1,5 +1,3 @@
-
-
 export const getGif = (searchTerm) => {
   return fetch(`https://api.giphy.com/v1/gifs/random?tag=${searchTerm}&api_key=${process.env.API_KEY}`)
     .then(res => ([res.ok, res.json()]))
@@ -12,7 +10,7 @@ export const getGif = (searchTerm) => {
       }
     })
     .then((data) => ({
-      image: data.image_original_url
+      imageURL: data.data.image_original_url
     }));
     
     
