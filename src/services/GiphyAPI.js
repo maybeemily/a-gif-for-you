@@ -12,7 +12,7 @@ export const getGif = (searchTerm) => {
       }
     })
     .then((data) => ({
-      image: data.image_url
+      image: data.image_original_url
     }));
     
     

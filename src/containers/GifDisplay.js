@@ -9,7 +9,6 @@ export default class GifDisplay extends PureComponent {
   state = {
     searchText: '',
     image: '',
-    
   }
 
   handleChange = ({ target }) => {
