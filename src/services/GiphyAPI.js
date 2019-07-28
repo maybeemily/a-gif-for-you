@@ -10,7 +10,8 @@ export const getGif = (searchTerm) => {
       }
     })
     .then((data) => ({
-      imageURL: data.data.image_original_url
+      imageURL: data.data.image_original_url,
+      url: data.data.url
     }));
     
     
