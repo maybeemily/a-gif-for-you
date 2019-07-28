@@ -2,18 +2,22 @@ import React, { PureComponent } from 'react';
 import GifSearchForm from '../components/GifSearchForm';
 import Gif from '../components/Gif';
 import { getGif } from '../services/GiphyAPI';
+import WithLoading from '../components/WithLoading';
 
+const GifWithLoading = WithLoading(Gif);
 
 class GifDisplay extends PureComponent {
 
   state = {
     searchText: '',
     imageURL: '',
+    loading: false
   }
 
   fetchGif = () => {
+    this.setState({ loading: true });
     getGif(this.state.searchText)
-      .then((imageURL) => this.setState(imageURL));
+      .then(({ imageURL }) => this.setState({ imageURL, loading: false }));
   }
 
   searchSubmit = event => {
@@ -26,10 +30,12 @@ class GifDisplay extends PureComponent {
   }
 
   render() {
+    const { searchText, imageURL } = this.state;
+
     return (
       <>
-        <GifSearchForm searchText={this.state.searchText} handleChange={this.handleChange} searchSubmit={this.searchSubmit}/>
-        <Gif imageURL={this.state.imageURL}/>
+        <GifSearchForm searchText={searchText} handleChange={this.handleChange} searchSubmit={this.searchSubmit}/>
+        <GifWithLoading imageURL={imageURL} isLoading={this.state.loading}/>
       </>
     );
   }
