@@ -10,6 +10,13 @@ export const GlobalStyle = createGlobalStyle`
     background: linear-gradient(white 0%, hotpink 90%);
     background-size: 600% 600%;
   }
+
+  input, button, label {
+    letter-spacing: .09em;
+    font-size: 1.5em;
+    font-family: 'Varela Round', sans-serif;
+  }
+
   img {
     max-width: 60vw;
     max-height: 50vh;
@@ -18,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Wrapper = styled.div`
   text-align: center;
-  min-height: 80vh;
+  height: 95vh;
 `;
 
 /* styles for Header.js */
@@ -59,32 +66,56 @@ export const Loader = styled.div`
   height: 4rem;
   border-radius: 50%;
   margin: 0 auto;
-  background: radial-gradient(circle at center, hotpink 0%, blue 100%);
+  background: radial-gradient(circle at center, hotpink 0%, #FB5012 100%);
   background-size: 600% 600%;
   animation: ${spin} 1s linear infinite, ${gradient} 3s ease infinite;
 `;
 
 /* styles for GifSearchForm.js */
 
-export const SearchForm = styled.input`
+export const SearchForm = styled.form`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const SearchBox = styled.input`
   background-color: white;
-  border: 1px solid pink;
+  border: 2px solid pink;
   border-radius: 2px;
   width: 20vw;
   min-width: 200px;
-  height: 2em;
-  margin: 2em;
+  height: 3rem;
+  margin: 3rem 2rem 3rem 1rem;
   padding-right: 1%;
   padding-left: 1%;
-  font-size: 1.5em;
-  font-family: 'Varela Round', sans-serif;
-  letter-spacing: .09em;
   &:focus {
     outline-color: hotpink;
-}
+  }
 `;
 
 export const SearchButton = styled.button`
+  background-color: pink;
+  border: 2px solid pink;
   border-radius: 2px;
-  height: 2em;
+  height: 3rem;
+  padding-right: 1%;
+  padding-left: 1%;
+  &:focus {
+    outline-color: hotpink;
+  }
+`;
+
+export const Button = styled(SearchButton)`
+  margin: rem;
+`;
+
+export const Label = styled.label`
+  font-size: 1.75em;
+`;
+
+export const GifFooter = styled.footer`
+  text-align: center;
+  font-size: 1em;
 `;

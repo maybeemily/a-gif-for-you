@@ -1,13 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SearchForm, SearchButton } from '../styles/styles';
+import { SearchForm, SearchButton, SearchBox, Label, Button } from '../styles/styles';
 
 function GifSearchForm({ searchText, handleChange, searchSubmit }) {
   return (
-    <form onSubmit={searchSubmit}>
-      <SearchForm name="searchText" type="text" value={searchText} onChange={handleChange}/>
-      <SearchButton type="submit">Gif Me!</SearchButton>
-    </form>
+  <>
+    <SearchForm onSubmit={searchSubmit}>
+      <Label htmlFor="searchText">Tag:</Label>
+      <SearchBox name="searchText" type="text" value={searchText} onChange={handleChange}/>
+      <SearchButton type="submit">Submit</SearchButton>
+    </SearchForm>
+      <Button>Random Gif</Button>
+      <Button>Clear</Button>
+  </>
   );
 }
 
