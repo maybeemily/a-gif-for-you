@@ -1,15 +1,17 @@
 import React from 'react';
 import GifDisplay from '../containers/GifDisplay';
 import Header from '../components/Header';
-import { GlobalStyle } from '../styles/styles';
+import { GlobalStyle, Wrapper } from '../styles/styles';
 
 
 export default function App() {
   return (
   <>
-  <GlobalStyle/>
-  <Header/>
-  <GifDisplay/>
+  <Wrapper>
+    <Header/>
+    <GlobalStyle/>
+    <GifDisplay/>
+  </Wrapper>
   </>
   );
 }

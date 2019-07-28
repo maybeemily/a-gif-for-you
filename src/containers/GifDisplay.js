@@ -31,13 +31,13 @@ class GifDisplay extends PureComponent {
   }
 
   render() {
-    const { searchText, imageURL, url } = this.state;
+    const { searchText, imageURL, url, loading } = this.state;
 
     return (
-      <>
+      <section>
         <GifSearchForm searchText={searchText} handleChange={this.handleChange} searchSubmit={this.searchSubmit}/>
-        <GifWithLoading imageURL={imageURL} url={url} isLoading={this.state.loading}/>
-      </>
+        <GifWithLoading imageURL={imageURL} url={url} isLoading={loading}/>
+      </section>
     );
   }
 }
