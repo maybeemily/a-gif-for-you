@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     ${reset}
     font-family: 'Varela Round', sans-serif;
-    background: linear-gradient(white 0%, hotpink 75%);
+    background: linear-gradient(white 0%, hotpink 90%);
     background-size: 600% 600%;
   }
   img {
@@ -68,7 +68,7 @@ export const Loader = styled.div`
 
 export const SearchForm = styled.input`
   background-color: white;
-  border: 1px solid black;
+  border: 1px solid pink;
   border-radius: 2px;
   width: 20vw;
   min-width: 200px;

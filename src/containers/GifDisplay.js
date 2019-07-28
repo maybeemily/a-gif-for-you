@@ -12,13 +12,14 @@ class GifDisplay extends PureComponent {
     searchText: '',
     imageURL: '',
     url: '',
+    title: '',
     loading: false
   }
 
   fetchGif = () => {
     this.setState({ loading: true });
     getGif(this.state.searchText)
-      .then(({ imageURL, url }) => this.setState({ imageURL, url, loading: false }));
+      .then(({ imageURL, url, title }) => this.setState({ imageURL, url, title, loading: false }));
   }
 
   searchSubmit = event => {
@@ -31,12 +32,12 @@ class GifDisplay extends PureComponent {
   }
 
   render() {
-    const { searchText, imageURL, url, loading } = this.state;
+    const { searchText, imageURL, url, loading, title } = this.state;
 
     return (
       <section>
         <GifSearchForm searchText={searchText} handleChange={this.handleChange} searchSubmit={this.searchSubmit}/>
-        <GifWithLoading imageURL={imageURL} url={url} isLoading={loading}/>
+        <GifWithLoading imageURL={imageURL} url={url} title={title} isLoading={loading}/>
       </section>
     );
   }
