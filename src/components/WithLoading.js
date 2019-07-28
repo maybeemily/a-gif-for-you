@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Loader } from '../styles/styles';
 
 export default function WithLoading(Component) {
   return function WithLoadingComponent({ isLoading, ...props }) {
@@ -7,7 +8,7 @@ export default function WithLoading(Component) {
     WithLoadingComponent.propTypes = {
       isLoading: PropTypes.bool.isRequired,
     };
-    return (<p>Loading...Loading...Loading...</p>);
+    return (<Loader/>);
   };
 }
 
