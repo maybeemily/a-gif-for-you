@@ -7,7 +7,6 @@ import WithLoading from '../components/WithLoading';
 const GifWithLoading = WithLoading(Gif);
 
 class GifDisplay extends PureComponent {
-
   state = {
     searchText: '',
     imageURL: '',
