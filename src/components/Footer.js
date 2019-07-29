@@ -1,7 +1,6 @@
 import React from 'react';
 import { GifFooter } from '../styles/styles';
 
-
 function Footer() {
   return (
     <GifFooter>

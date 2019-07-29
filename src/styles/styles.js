@@ -123,8 +123,10 @@ export const SearchButton = styled.button`
   }
 `;
 
-export const Label = styled.label`
-  font-size: 1.75em;
+/* styles for Gif.js */
+
+export const Button = styled(SearchButton)`
+  margin-left: 2rem;
 `;
 
 /* styles for Footer.js */
@@ -132,6 +134,7 @@ export const Label = styled.label`
 export const GifFooter = styled.footer`
   text-align: center;
   font-size: 1em;
+  margin-bottom: 2rem;
 `;
 
 /* styles for Instructions.js */
