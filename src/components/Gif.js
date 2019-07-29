@@ -10,8 +10,7 @@ function Gif({ imageURL, url, title }) {
 Gif.propTypes = {
   imageURL: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  reset: PropTypes.func.isRequired
+  title: PropTypes.string.isRequired
 };
 
 export default Gif;

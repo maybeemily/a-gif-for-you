@@ -18,8 +18,7 @@ function GifSearchForm({ searchText, handleChange, searchSubmit }) {
 GifSearchForm.propTypes = {
   searchText: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
-  searchSubmit: PropTypes.func.isRequired,
-  surpriseSubmit: PropTypes.func.isRequired
+  searchSubmit: PropTypes.func.isRequired
 };
 
 export default GifSearchForm;
