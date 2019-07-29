@@ -34,7 +34,8 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Wrapper = styled.div`
   text-align: center;
-  height: 95vh;
+  padding-bottom: 2rem;
+  height: 88vh;
 `;
 
 /* styles for Header.js */
@@ -85,7 +86,9 @@ export const Loader = styled.div`
 /* styles for GifSearchForm.js */
 
 export const SearchWrapper = styled.div`
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 `;
 
 export const SearchForm = styled.form`
@@ -116,17 +119,13 @@ export const SearchButton = styled.button`
   border: 2px solid pink;
   border-radius: 2px;
   height: 3.3rem;
-  padding-right: 1%;
-  padding-left: 1%;
+  min-width: 60px;
+  padding-right: 8px;
+  padding-left: 8px;
+  word-wrap: nowrap;
   &:focus {
     outline-color: hotpink;
   }
-`;
-
-/* styles for Gif.js */
-
-export const Button = styled(SearchButton)`
-  margin-left: 2rem;
 `;
 
 /* styles for Footer.js */
@@ -134,10 +133,15 @@ export const Button = styled(SearchButton)`
 export const GifFooter = styled.footer`
   text-align: center;
   font-size: 1em;
-  margin-bottom: 2rem;
+  height: 2rem;
+  margin-top: 1rem;
 `;
 
 /* styles for Instructions.js */
+
+export const InstructionSection = styled.section`
+  margin: 0 10% 0 10%;
+`;
 
 export const InstructionP = styled.p`
   font-style: italic;
