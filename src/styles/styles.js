@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
 import { reset } from 'styled-reset';
+
 /* Global Styles */
 
 export const GlobalStyle = createGlobalStyle`
@@ -33,6 +34,7 @@ export const Wrapper = styled.div`
 export const HeaderH1 = styled.h1`
   color: #FB5012;
   margin-top: 2rem;
+  margin-bottom: 3rem;
   letter-spacing: .4em;
   text-transform: uppercase;
   font-family: 'Concert One', sans-serif;
@@ -62,8 +64,8 @@ const gradient = keyframes`
 `;
 
 export const Loader = styled.div`
-  width: 4rem;
-  height: 4rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   margin: 0 auto;
   background: radial-gradient(circle at center, hotpink 0%, #FB5012 100%);
@@ -99,7 +101,7 @@ export const SearchButton = styled.button`
   background-color: pink;
   border: 2px solid pink;
   border-radius: 2px;
-  height: 3rem;
+  height: 3.3rem;
   padding-right: 1%;
   padding-left: 1%;
   &:focus {
@@ -108,14 +110,20 @@ export const SearchButton = styled.button`
 `;
 
 export const Button = styled(SearchButton)`
-  margin: rem;
+  margin: 1rem;
 `;
 
 export const Label = styled.label`
   font-size: 1.75em;
 `;
 
+/* styles for Footer.js */
+
 export const GifFooter = styled.footer`
   text-align: center;
   font-size: 1em;
+`;
+
+export const InstructionP = styled.p`
+  font-style: italic;
 `;

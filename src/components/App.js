@@ -3,6 +3,7 @@ import GifDisplay from '../containers/GifDisplay';
 import Header from '../components/Header';
 import { GlobalStyle, Wrapper } from '../styles/styles';
 import Footer from './Footer';
+import Instructions from './Instructions';
 
 
 export default function App() {
@@ -10,6 +11,7 @@ export default function App() {
   <>
   <Wrapper>
     <Header/>
+    <Instructions/>
     <GlobalStyle/>
     <GifDisplay/>
   </Wrapper>

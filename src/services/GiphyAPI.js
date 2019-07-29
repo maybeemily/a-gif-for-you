@@ -3,7 +3,7 @@ export const getGif = (searchTerm) => {
     .then(res => ([res.ok, res.json()]))
     .then(([ok, json]) => {
       if(!ok) {
-        throw 'No gifs with that tag, try again';
+        throw 'Error fetching data, try again';
       } else
       {
         return json;
@@ -14,6 +14,4 @@ export const getGif = (searchTerm) => {
       url: data.data.url,
       title: data.data.title
     }));
-    
-    
 };
