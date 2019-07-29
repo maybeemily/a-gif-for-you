@@ -14,8 +14,8 @@ export default function App() {
     <Instructions/>
     <GlobalStyle/>
     <GifDisplay/>
+    <Footer/>
   </Wrapper>
-  <Footer/>
   </>
   );
 }

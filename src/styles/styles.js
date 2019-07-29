@@ -133,8 +133,8 @@ export const SearchButton = styled.button`
 export const GifFooter = styled.footer`
   text-align: center;
   font-size: 1em;
-  height: 2rem;
   margin-top: 1rem;
+  height: 50px;
 `;
 
 /* styles for Instructions.js */
@@ -146,4 +146,10 @@ export const InstructionSection = styled.section`
 export const InstructionP = styled.p`
   font-style: italic;
   line-height: 1.5em;
+`;
+
+/* styles for Gif.js */
+
+export const GifWrapper = styled.div`
+  min-height: 200px;
 `;
