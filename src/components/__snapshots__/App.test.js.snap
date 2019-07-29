@@ -7,7 +7,7 @@ exports[`App component renders App 1`] = `
     <Instructions />
     <GlobalStyleComponent />
     <GifDisplay />
+    <Footer />
   </styled.div>
-  <Footer />
 </Fragment>
 `;
