@@ -36,7 +36,7 @@ class GifDisplay extends PureComponent {
 
     return (
       <section>
-        <GifSearchForm searchText={searchText} handleChange={this.handleChange} searchSubmit={this.searchSubmit}/>
+        <GifSearchForm searchText={searchText} handleChange={this.handleChange} searchSubmit={this.searchSubmit} />
         <GifWithLoading imageURL={imageURL} url={url} title={title} isLoading={loading}/>
       </section>
     );

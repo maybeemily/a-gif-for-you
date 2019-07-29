@@ -22,6 +22,14 @@ export const GlobalStyle = createGlobalStyle`
     max-width: 60vw;
     max-height: 50vh;
   }
+
+  a {
+    color: hotpink;
+    text-decoration: none;
+    &:hover {
+      color: #FB5012;
+    }
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -64,10 +72,11 @@ const gradient = keyframes`
 `;
 
 export const Loader = styled.div`
+  text-align: center;
   width: 2rem;
   height: 2rem;
-  border-radius: 50%;
   margin: 0 auto;
+  border-radius: 50%;
   background: radial-gradient(circle at center, hotpink 0%, #FB5012 100%);
   background-size: 600% 600%;
   animation: ${spin} 1s linear infinite, ${gradient} 3s ease infinite;
@@ -75,11 +84,16 @@ export const Loader = styled.div`
 
 /* styles for GifSearchForm.js */
 
+export const SearchWrapper = styled.div`
+  text-align: center;
+`;
+
 export const SearchForm = styled.form`
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: 4rem;
 `;
 
 export const SearchBox = styled.input`
@@ -109,10 +123,6 @@ export const SearchButton = styled.button`
   }
 `;
 
-export const Button = styled(SearchButton)`
-  margin: 1rem;
-`;
-
 export const Label = styled.label`
   font-size: 1.75em;
 `;
@@ -124,6 +134,9 @@ export const GifFooter = styled.footer`
   font-size: 1em;
 `;
 
+/* styles for Instructions.js */
+
 export const InstructionP = styled.p`
   font-style: italic;
+  line-height: 1.5em;
 `;

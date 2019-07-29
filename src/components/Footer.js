@@ -5,7 +5,7 @@ import { GifFooter } from '../styles/styles';
 function Footer() {
   return (
     <GifFooter>
-      Created in React by Emily Baier 2019.
+      made by <a href="https://www.emilybaier.com">emily baier</a> in 2019 using React and the <a href="https://developers.giphy.com/">Giphy API</a>.
     </GifFooter>
   );
 }
